@@ -29,6 +29,7 @@ int main()
                 printf("Votacao encerrada");
                 break;
             }
+        }
   return 0;
 
 }
