@@ -11,37 +11,39 @@ typedef struct
   int posrank;
 } tBandas;
 
-int PreencherBandas ()
+int PreencherBandas (tBandas *banda)
 {
   int i;
 
-  printf("\n Digite suas %d bandas favoritas", TAM);
+  printf("\n Digite suas bandas favoritas");
 
   for(i = 0; i < TAM; i++){
     printf("\n Nome: ");
-    scanf("%s", banda[i].nome);
+    scanf("%s", banda[i].nomeb);
     printf("\n Estilo: ");
     scanf("%s", banda[i].estilo);
     printf("\n Integrantes: ");
-    scanf("%s", banda[i].integantes);
-    printf("\n Ranking: ", banda[i].posrank);
+    scanf("%d", banda[i].integantes);
+    printf("\n Ranking: ");
+    scanf("%d", banda[i].posrank);
   }
 
   printf("\n");
 }
 
-void MostrarBandas ()
+void MostrarBandas (tBandas *banda)
 {
   int j;
 
   for(j = 0; j < TAM; j++){
-    printf("\n Banda: %s", banda[j].nome);
+    printf("\n Banda: %s", banda[j].nomeb);
     printf("\n Estilo: %s", banda[j].estilo);
     printf("\n Integrantes: %d", banda[j].integantes);
+    printf("\n Ranking: %d", banda[j].posrank);
   }
 }
 
-int rank()
+int rank(tBandas *banda)
 {
   int r, i;
 
