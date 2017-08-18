@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define  TAM 5
 
@@ -50,7 +49,10 @@ int rank(tBandas *banda)
   printf("\n Digite um numero do Ranking: ");
   scanf("%d", &r);
 
-  printf("\n A banda da posicao %d eh: ", r, banda[i]);
+  for(i = 0; i < TAM; i++){
+      printf("\n A banda da posicao %d eh: %s", r, banda[i]);
+  }
+
 
 }
 
@@ -58,9 +60,10 @@ int rank(tBandas *banda)
 
 int main()
 {
-  tBandas banda[TAM];
+  tBandas *banda[TAM];
 
   PreencherBandas(banda);
   MostrarBandas(banda);
+  rank(banda);
 
 }
