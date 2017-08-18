@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define  TAM 5
 
@@ -63,7 +64,8 @@ int main()
   tBandas *banda[TAM];
 
   PreencherBandas(banda);
-  MostrarBandas(banda);
+  MostrarBandas(&banda);
   rank(banda);
 
+  return 0;
 }
